@@ -1,0 +1,20 @@
+{
+  "name": "agentprime",
+  "version": "0.1.0",
+  "description": "Does this Advisory affect my App? Resolves a CVE, GHSA, advisory link or pasted post to an Advisory, analyses it, and assesses one App in the current Repository, ending in a Verdict with file:line evidence.",
+  "author": {
+    "name": "Craig Hewitt",
+    "email": "craig@craighewitt.com"
+  },
+  "homepage": "https://agentprime.io/plugin/",
+  "repository": "https://github.com/TheCraigHewitt/agentprime-plugin",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "advisory",
+    "dependencies",
+    "laravel",
+    "npm",
+    "packagist"
+  ]
+}

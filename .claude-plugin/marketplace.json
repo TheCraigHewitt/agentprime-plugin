@@ -1,0 +1,29 @@
+{
+  "name": "agentprime",
+  "owner": {
+    "name": "Craig Hewitt",
+    "email": "craig@craighewitt.com"
+  },
+  "metadata": {
+    "description": "The agentprime Claude Code plugin: does this Advisory affect my App?"
+  },
+  "plugins": [
+    {
+      "name": "agentprime",
+      "source": "./",
+      "description": "Does this Advisory affect my App? Resolves a CVE, GHSA, advisory link or pasted post to an Advisory, analyses it, and assesses one App in the current Repository, ending in a Verdict with file:line evidence.",
+      "category": "security",
+      "homepage": "https://agentprime.io/plugin/",
+      "repository": "https://github.com/TheCraigHewitt/agentprime-plugin",
+      "license": "MIT",
+      "keywords": [
+        "security",
+        "advisory",
+        "dependencies",
+        "laravel",
+        "npm",
+        "packagist"
+      ]
+    }
+  ]
+}
