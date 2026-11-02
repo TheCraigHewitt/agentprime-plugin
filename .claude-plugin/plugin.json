@@ -1,7 +1,7 @@
 {
   "name": "agentprime",
-  "version": "0.1.0",
-  "description": "Does this Advisory affect my App? Resolves a CVE, GHSA, advisory link or pasted post to an Advisory, analyses it, and assesses one App in the current Repository, ending in a Verdict with file:line evidence.",
+  "version": "0.2.0",
+  "description": "Check your lockfiles against every published advisory (/agentprime:check, /agentprime:watch, /agentprime:cve), and find out whether an Advisory affects your App: resolves a CVE, GHSA, advisory link or pasted post, analyses it, and ends in a Verdict with file:line evidence.",
   "author": {
     "name": "Craig Hewitt",
     "email": "craig@craighewitt.com"

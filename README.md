@@ -28,6 +28,22 @@ To update later, run `/plugin marketplace update agentprime`.
 
 ## Use it
 
+### Quick commands (need the agentprime MCP server)
+
+Connect the MCP server once (add `--header "Authorization: Bearer <key>"` with a free key from https://agentprime.io/account/ for higher limits and watching):
+
+```text
+claude mcp add --transport http agentprime https://api.agentprime.io/mcp
+```
+
+Then, from a repository:
+
+- `/agentprime:check` checks its lockfiles against every published advisory and gives an upgrade plan.
+- `/agentprime:watch` watches them and emails you about new matches (needs a free key).
+- `/agentprime:cve CVE-2026-12345` says whether one advisory is in your dependencies.
+
+### Does it affect my code?
+
 From the repository you want to assess, ask in plain words ("does CVE-2026-12345 affect us?", or paste an advisory link) or run the skill directly:
 
 ```text
@@ -72,4 +88,4 @@ This repository is generated from agentprime's main repository and is never edit
 
 ## Licence
 
-[MIT](LICENSE). Plugin version 0.1.0.
+[MIT](LICENSE). Plugin version 0.2.0.
