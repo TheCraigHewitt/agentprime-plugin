@@ -811,13 +811,14 @@ export async function run(args) {
     if (unknown.length) warnings.push(`--only: not a Match for this App: ${unknown.join(", ")}`);
   }
 
-  // --retry-errors runs only the rows whose last status was a failure; every other row comes from the cache or,
-  // when the cache misses (no_match and rejected rows never cache), is carried over from the last report.
+  // --retry-errors runs the rows whose last status was a failure, and Matches the last report didn't have (new
+  // Advisories, or a changed lockfile); every other row comes from the cache or, when the cache misses (no_match
+  // and rejected rows never cache), is carried over from the last report.
   const retry = previous ? new Set([...previous.values()].filter((r) => RETRY_STATUSES.includes(r.status)).map((r) => r.advisory_id)) : null;
   let stopped = null;
   const skip = (id) => () => {
     if (noRun) return {};
-    if (retry && !retry.has(id)) return previous.has(id) ? { carry: previous.get(id) } : { error: "not in the last report.json; --retry-errors runs only its failed rows" };
+    if (retry && !retry.has(id) && previous.has(id)) return { carry: previous.get(id) };
     if (stopped) return { error: `stopped: ${stopped.reason}` };
     return null;
   };

@@ -11,7 +11,7 @@
     {
       "name": "agentprime",
       "source": "./",
-      "description": "Does this Advisory affect my App? Resolves a CVE, GHSA, advisory link or pasted post to an Advisory, analyses it, and assesses one App in the current Repository, ending in a Verdict with file:line evidence.",
+      "description": "Check your lockfiles against every published advisory (/agentprime:check, /agentprime:watch, /agentprime:cve), and find out whether an Advisory affects your App: resolves a CVE, GHSA, advisory link or pasted post, analyses it, and ends in a Verdict with file:line evidence.",
       "category": "security",
       "homepage": "https://agentprime.io/plugin/",
       "repository": "https://github.com/TheCraigHewitt/agentprime-plugin",
